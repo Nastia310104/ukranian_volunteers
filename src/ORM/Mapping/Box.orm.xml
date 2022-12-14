@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="https://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="https://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="App\Entity\Box" table="boxes" >
+
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+
+        <many-to-one field="pallet" target-entity="App\Entity\Pallet" >
+            <join-column name="pallet_id" referenced-column-name="id" />
+        </many-to-one>
+
+        <many-to-one field="receiver" target-entity="App\Entity\Receiver" >
+            <join-column name="receiver_id" referenced-column-name="id" />
+        </many-to-one>
+
+        <many-to-many field="categories" target-entity="App\Entity\Category" >
+            <join-tabe name="boxes_categories">
+                <join-columns>
+                    <join-column name="category_id" referenced-column-name="id" />
+                </join-columns>
+                <inverse-join-colums>
+                    <join-column name="box_id" referenced-column-name="id" />
+                </inverse-join-colums>
+            </join-tabe>
+        </many-to-many>
+
+    </entity>
+</doctrine-mapping>
