@@ -12,3 +12,11 @@ migrate:
 
 cache-clear:
 	./bin/console cache:clear --env=dev
+
+server-start:
+	symfony local:server:start -d
+
+server-stop:
+	bin/console local:server:stop
+
+start-project: docker-up migrate server-start
