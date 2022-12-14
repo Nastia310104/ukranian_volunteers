@@ -38,3 +38,8 @@ services:
         tags:
             - { name: sonata.admin, model_class: App\Entity\Pallet, manager_type: orm, label: Pallet }
 
+    admin.category:
+        class: App\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Category, manager_type: orm, label: Category }
+
