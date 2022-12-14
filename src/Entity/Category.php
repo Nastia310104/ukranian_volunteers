@@ -14,6 +14,11 @@ class Category implements IdInterface
      */
     public string $categoryName;
 
+    public function __toString(): string
+    {
+        return $this->getCategoryName();
+    }
+
     /**
      * @return string
      */
