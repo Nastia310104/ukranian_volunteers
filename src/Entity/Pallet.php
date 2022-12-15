@@ -16,11 +16,6 @@ class Pallet implements IdInterface
         $this->boxes = new ArrayCollection();
     }
 
-    public function __toString(): string
-    {
-        return $this->getId();
-    }
-
     /**
      * @var Receiver
      */
