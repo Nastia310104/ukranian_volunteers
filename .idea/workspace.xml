@@ -4,8 +4,9 @@
     <list default="true" id="f5e5db17-3c13-40c1-8021-87e1ca5b43af" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Pallet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pallet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/PalletAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/PalletAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Box.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Box.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ORM/Mapping/Pallet.orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ORM/Mapping/Pallet.orm.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +250,7 @@
       <workItem from="1670914186232" duration="589000" />
       <workItem from="1670979403835" duration="3830000" />
       <workItem from="1670985672604" duration="2689000" />
-      <workItem from="1671033507368" duration="4481000" />
+      <workItem from="1671033507368" duration="7935000" />
     </task>
     <servers />
   </component>
