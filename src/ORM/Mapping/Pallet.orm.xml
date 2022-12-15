@@ -17,7 +17,7 @@
             <join-column name="shipment_id" referenced-column-name="id" />
         </many-to-one>
 
-        <one-to-many field="boxes" target-entity="App\Entity\Box" mapped-by="pallet_id" />
+        <one-to-many field="boxes" target-entity="App\Entity\Box" mapped-by="pallet" />
 
     </entity>
 </doctrine-mapping>
