@@ -15,11 +15,6 @@ class Shipment implements IdInterface
      */
     public DateTime $sendDate;
 
-    public function __toString(): string
-    {
-        return $this->getId();
-    }
-
     /**
      * @return DateTime
      */
