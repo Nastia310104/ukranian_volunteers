@@ -32,3 +32,8 @@ services:
         class: App\Admin\ReceiverAdmin
         tags:
             - { name: sonata.admin, model_class: App\Entity\Receiver, manager_type: orm, label: Receiver }
+
+    admin.pallet:
+        class: App\Admin\PalletAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Pallet, manager_type: orm, label: Pallet }
