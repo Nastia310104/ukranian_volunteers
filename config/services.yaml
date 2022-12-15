@@ -43,3 +43,7 @@ services:
         tags:
             - { name: sonata.admin, model_class: App\Entity\Category, manager_type: orm, label: Category }
 
+    admin.box:
+        class: App\Admin\BoxAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Box, manager_type: orm, label: Box }

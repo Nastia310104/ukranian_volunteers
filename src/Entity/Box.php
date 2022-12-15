@@ -39,6 +39,11 @@ class Box implements IdInterface
         return $this->categories;
     }
 
+    public function __toString(): string
+    {
+        return $this->getId();
+    }
+
     /**
      * @param ArrayCollection|Collection $categories
      */
