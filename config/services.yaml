@@ -22,3 +22,29 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    admin.shipment:
+        class: App\Admin\ShipmentAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Shipment, manager_type: orm, label: Shipment }
+
+    admin.receiver:
+        class: App\Admin\ReceiverAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Receiver, manager_type: orm, label: Receiver }
+
+    admin.pallet:
+        class: App\Admin\PalletAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Pallet, manager_type: orm, label: Pallet }
+
+    admin.category:
+        class: App\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Category, manager_type: orm, label: Category }
+
+    admin.box:
+        class: App\Admin\BoxAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Box, manager_type: orm, label: Box }
+
