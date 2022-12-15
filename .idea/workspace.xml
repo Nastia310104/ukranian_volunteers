@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5e5db17-3c13-40c1-8021-87e1ca5b43af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Admin/PalletAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/PalletAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Receiver.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Receiver.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

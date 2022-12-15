@@ -26,24 +26,24 @@ services:
     admin.shipment:
         class: App\Admin\ShipmentAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\Shipment, manager_type: orm, label: Shipment }
+            - { name: sonata.admin, model_class: App\Entity\Shipment, manager_type: orm, label: Shipment, group: Humanitarian aid }
 
     admin.receiver:
         class: App\Admin\ReceiverAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\Receiver, manager_type: orm, label: Receiver }
+            - { name: sonata.admin, model_class: App\Entity\Receiver, manager_type: orm, label: Receiver, group: Humanitarian aid }
 
     admin.pallet:
         class: App\Admin\PalletAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\Pallet, manager_type: orm, label: Pallet }
+            - { name: sonata.admin, model_class: App\Entity\Pallet, manager_type: orm, label: Pallet, group: Humanitarian aid }
 
     admin.category:
         class: App\Admin\CategoryAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\Category, manager_type: orm, label: Category }
+            - { name: sonata.admin, model_class: App\Entity\Category, manager_type: orm, label: Category, group: Humanitarian aid }
 
     admin.box:
         class: App\Admin\BoxAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\Box, manager_type: orm, label: Box }
+            - { name: sonata.admin, model_class: App\Entity\Box, manager_type: orm, label: Box, group: Humanitarian aid }
