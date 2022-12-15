@@ -38,7 +38,7 @@ class Receiver implements IdInterface
 
     public function __toString(): string
     {
-        return $this->getId();
+        return $this->getName();
     }
 
     /**
