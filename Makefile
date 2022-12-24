@@ -2,7 +2,7 @@ docker-up:
 	docker-compose up -d
 
 docker-down:
-	docker-compose down --rmi all --volumes
+	docker-compose down
 
 migration-create:
 	php bin/console make:migration
@@ -18,5 +18,3 @@ server-start:
 
 server-stop:
 	bin/console local:server:stop
-
-start-project: docker-up migrate server-start

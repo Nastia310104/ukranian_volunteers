@@ -36,7 +36,7 @@ services:
     admin.pallet:
         class: App\Admin\PalletAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\Pallet, manager_type: orm, label: Pallet, group: Humanitarian aid }
+            - { name: sonata.admin, model_class: App\Entity\Pallet, controller: App\Controller\StickerAdminController, manager_type: orm, label: Pallet, group: Humanitarian aid }
 
     admin.category:
         class: App\Admin\CategoryAdmin
@@ -46,4 +46,4 @@ services:
     admin.box:
         class: App\Admin\BoxAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\Box, manager_type: orm, label: Box, group: Humanitarian aid }
+            - { name: sonata.admin, model_class: App\Entity\Box, controller: App\Controller\StickerAdminController, manager_type: orm, label: Box, group: Humanitarian aid }

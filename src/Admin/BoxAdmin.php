@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollectionInterface;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\Form\Type\CollectionType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -14,6 +15,12 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class BoxAdmin extends AbstractAdmin
 {
+    protected function configureRoutes(RouteCollectionInterface $collection): void
+    {
+        $collection
+            ->add('generate', $this->getRouterIdParameter().'/generate');
+    }
+
     protected function configureFormFields(FormMapper $form): void
     {
         $form
@@ -54,6 +61,16 @@ class BoxAdmin extends AbstractAdmin
             ->add('pallet')
             ->add('receiver')
             ->add('categories')
+            ->add(ListMapper::NAME_ACTIONS, null, [
+                'actions' => [
+                    'show' => [],
+                    'edit' => [],
+                    'delete' => [],
+                    'generate' => [
+                        'template' => 'CRUD/list__action_generate.html.twig',
+                    ],
+                ],
+            ])
         ;
     }
 
@@ -61,10 +78,10 @@ class BoxAdmin extends AbstractAdmin
     {
         $show
             ->with('group.general', ['class' => 'col-md-6'])
-            ->add('id')
-            ->add('pallet')
-            ->add('receiver')
-            ->add('categories')
+                ->add('id')
+                ->add('pallet')
+                ->add('receiver')
+                ->add('categories')
             ->end()
         ;
     }

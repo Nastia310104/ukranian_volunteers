@@ -6,10 +6,17 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollectionInterface;
 use Sonata\AdminBundle\Show\ShowMapper;
 
 class PalletAdmin extends AbstractAdmin
 {
+    protected function configureRoutes(RouteCollectionInterface $collection): void
+    {
+        $collection
+            ->add('generate', $this->getRouterIdParameter().'/generate');
+    }
+
     protected function configureFormFields(FormMapper $form): void
     {
         $form
@@ -42,6 +49,16 @@ class PalletAdmin extends AbstractAdmin
             ->addIdentifier('id')
             ->add('receiver')
             ->add('shipment')
+            ->add(ListMapper::NAME_ACTIONS, null, [
+                'actions' => [
+                    'show' => [],
+                    'edit' => [],
+                    'delete' => [],
+                    'generate' => [
+                        'template' => 'CRUD/list__action_generate.html.twig',
+                    ],
+                ],
+            ])
         ;
     }
 
