@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/sonatatwig/css/sticker_style.css') }}">
-        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('styles/sticker_style.css') }}" />
             <title>{{ class }} {{ object.id }} data</title>
-        {% endblock %}
     </head>
     <body>
         {% block body %}
@@ -15,17 +13,19 @@
                 </tr>
                 <tr align="center">
                     <td>
-                        <span style="font-size:100px; font-weight: bold">{{ object.id }}</span>
+                        <span class="link" onclick="window.print()" style="font-size:100px; font-weight: bold">
+                            {{ object.id }}
+                        </span>
                     </td>
                     <td>
-                        <img src="frame.png" alt="Girl in a jacket" width="200" height="200">
+                        <img src="frame.png" alt="QR code with shipment data" width="200" height="200">
                     </td>
                 </tr>
                 <tr>
                     <th>FROM:</th>
                     <th>TO:</th>
                 </tr>
-                <tr style="font-size:24px">
+                <tr>
                     <td>
                         <span>
                             HELP UKRAINE OSWEGO NY<br>
@@ -48,22 +48,25 @@
                     <th colspan="2">CONTENT:</th>
                 </tr>
                 <tr>
+{#  Redundancy -_-  #}
                     <td colspan="2">
-                        {% if class == "Box" %}
-                            {% for category in object.categories %}
-                                {{ category.categoryName }},
-                            {%  endfor %}
-                        {% else %}
-                            {% set names = [] %}
+                        {% set categories = [] %}
+                            {% if class == "Box" %}
+                                {% for category in object.categories %}
+                                    {% if category.categoryName not in categories %}
+                                        {% set categories = categories|merge([category.categoryName]) %}
+                                    {% endif %}
+                                {%  endfor %}
+                            {% else %}
                                 {% for box in object.boxes %}
                                     {% for category in box.categories %}
-                                        {% if category.categoryName not in names %}
-                                            {% set names = names|merge([category.categoryName]) %}
+                                        {% if category.categoryName not in categories %}
+                                            {% set categories = categories|merge([category.categoryName]) %}
                                         {% endif %}
                                     {% endfor %}
                                 {% endfor %}
-                            {{ names|join('; ') }}
-                        {% endif %}
+                            {% endif %}
+                        {{ categories|join('; ') }}
                     </td>
                 </tr>
             </table>
