@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ asset('styles/sticker_style.css') }}" />
+            <title>{{ class }} {{ object.id }} data</title>
+    </head>
+    <body>
+        {% block body %}
+            <table>
+                <tr>
+                    <th>{{ class|upper }} NUMBER:</th>
+                    <th>LINK:</th>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <span class="link" onclick="window.print()" style="font-size:100px; font-weight: bold">
+                            {{ object.id }}
+                        </span>
+                    </td>
+                    <td>
+                        <img src="frame.png" alt="QR code with shipment data" width="200" height="200">
+                    </td>
+                </tr>
+                <tr>
+                    <th>FROM:</th>
+                    <th>TO:</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span>
+                            HELP UKRAINE OSWEGO NY<br>
+                            217 Murray St.<br>
+                            Oswego, NY 13126<br>
+                            858-337-3742 (Anton Chertkovsky)
+                        </span>
+                    </td>
+                    <td>
+                        {% if object.receiver %}
+                        <span>
+                            {{ object.receiver.address }}<br>
+                            {{ object.receiver.name }}<br>
+                            {{ object.receiver.phoneNumber }}
+                        </span>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">CONTENT:</th>
+                </tr>
+                <tr>
+{#  Redundancy -_-  #}
+                    <td colspan="2">
+                        {% set categories = [] %}
+                            {% if class == "Box" %}
+                                {% for category in object.categories %}
+                                    {% if category.categoryName not in categories %}
+                                        {% set categories = categories|merge([category.categoryName]) %}
+                                    {% endif %}
+                                {%  endfor %}
+                            {% else %}
+                                {% for box in object.boxes %}
+                                    {% for category in box.categories %}
+                                        {% if category.categoryName not in categories %}
+                                            {% set categories = categories|merge([category.categoryName]) %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+                            {% endif %}
+                        {{ categories|join('; ') }}
+                    </td>
+                </tr>
+            </table>
+        {% endblock %}
+    </body>
+</html>

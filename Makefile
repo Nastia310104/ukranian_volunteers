@@ -1,22 +1,30 @@
+CONSOLE = ./bin/console
+DOCKER = docker-compose
+
+# docker
 docker-up:
-	docker-compose up -d
+	${DOCKER} up -d
 
 docker-down:
-	docker-compose down --rmi all --volumes
+	${DOCKER} down
 
+docker-stop:
+	${DOCKER} stop
+
+# database
 migration-create:
-	php bin/console make:migration
+	${CONSOLE} make:migration
 
 migrate:
-	php bin/console doctrine:migrations:migrate
+	${CONSOLE} doctrine:migrations:migrate
 
-cache-clear:
-	./bin/console cache:clear --env=dev
-
+# server
 server-start:
 	symfony local:server:start -d
 
 server-stop:
-	bin/console local:server:stop
+	symfony local:server:stop
 
-start-project: docker-up migrate server-start
+# other
+cache:
+	${CONSOLE} cache:clear --env=dev
