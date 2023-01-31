@@ -13,7 +13,7 @@
             <join-column name="pallet_id" referenced-column-name="id" />
         </many-to-one>
 
-        <many-to-one field="receiver" target-entity="App\Entity\Receiver" >
+        <many-to-one field="receiver" target-entity="App\Entity\User" >
             <join-column name="receiver_id" referenced-column-name="id" />
         </many-to-one>
 
