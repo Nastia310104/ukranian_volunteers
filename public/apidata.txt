@@ -1,0 +1,126 @@
+Данные от бота: Array
+(
+    [update_id] => 587948856
+    [message] => Array
+        (
+            [message_id] => 56
+            [from] => Array
+                (
+                    [id] => 897459739
+                    [is_bot] => 
+                    [first_name] => Nastia
+                    [username] => somk360
+                    [language_code] => en
+                )
+
+            [chat] => Array
+                (
+                    [id] => 897459739
+                    [first_name] => Nastia
+                    [username] => somk360
+                    [type] => private
+                )
+
+            [date] => 1673923130
+            [text] => fuck
+        )
+
+)
+Данные от бота: Array
+(
+    [update_id] => 587948857
+    [message] => Array
+        (
+            [message_id] => 57
+            [from] => Array
+                (
+                    [id] => 897459739
+                    [is_bot] => 
+                    [first_name] => Nastia
+                    [username] => somk360
+                    [language_code] => en
+                )
+
+            [chat] => Array
+                (
+                    [id] => 897459739
+                    [first_name] => Nastia
+                    [username] => somk360
+                    [type] => private
+                )
+
+            [date] => 1673923145
+            [text] => /start
+            [entities] => Array
+                (
+                    [0] => Array
+                        (
+                            [offset] => 0
+                            [length] => 6
+                            [type] => bot_command
+                        )
+
+                )
+
+        )
+
+)
+Данные от бота: Данные от бота: Array
+(
+    [update_id] => 587948858
+    [message] => Array
+        (
+            [message_id] => 58
+            [from] => Array
+                (
+                    [id] => 897459739
+                    [is_bot] => 
+                    [first_name] => Nastia
+                    [username] => somk360
+                    [language_code] => en
+                )
+
+            [chat] => Array
+                (
+                        [id] => 897459739
+                    [first_name] => Nastia
+                    [username] => somk360
+                    [type] => private
+                )
+
+            [date] => 1673923232
+            [photo] => Array
+                (
+                    [0] => Array
+                        (
+                            [file_id] => AgACAgIAAxkBAAM6Y8YKoD0G-dTICi6c99ZyDYlpQF4AAozCMRsKCDFKvjJ928yH1w0BAAMCAANzAAMtBA
+                            [file_unique_id] => AQADjMIxGwoIMUp4
+                            [file_size] => 1449
+                            [width] => 90
+                            [height] => 90
+                        )
+
+                    [1] => Array
+                        (
+                            [file_id] => AgACAgIAAxkBAAM6Y8YKoD0G-dTICi6c99ZyDYlpQF4AAozCMRsKCDFKvjJ928yH1w0BAAMCAANtAAMtBA
+                            [file_unique_id] => AQADjMIxGwoIMUpy
+                            [file_size] => 16229
+                            [width] => 320
+                            [height] => 320
+                        )
+
+                    [2] => Array
+                        (
+                            [file_id] => AgACAgIAAxkBAAM6Y8YKoD0G-dTICi6c99ZyDYlpQF4AAozCMRsKCDFKvjJ928yH1w0BAAMCAAN4AAMtBA
+                            [file_unique_id] => AQADjMIxGwoIMUp9
+                            [file_size] => 35272
+                            [width] => 600
+                            [height] => 600
+                        )
+
+                )
+
+        )
+
+)
+Данные от бота: 

@@ -35,3 +35,15 @@ server-stop:
 # other
 cache:
 	${CONSOLE} cache:clear --env=dev
+
+#telegram
+webhook-set:
+	php bin/console telegram:bot:webhook:set
+
+webhook-info:
+	php bin/console telegram:bot:webhook:info
+
+webhook-delete:
+	php bin/console telegram:bot:webhook:delete
+
+
