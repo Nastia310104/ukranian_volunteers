@@ -1,6 +1,6 @@
 sonata_user:
   class:
-    user: App\Entity\SonataUserUser
+    user: App\Entity\User
   resetting:
     email:
       address: sonata@localhost

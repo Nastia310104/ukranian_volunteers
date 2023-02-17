@@ -22,9 +22,9 @@ class Pallet implements IdInterface
     }
 
     /**
-     * @var Receiver
+     * @var User
      */
-    public Receiver $receiver;
+    public User $receiver;
 
     /**
      * @var Collection|ArrayCollection
@@ -37,17 +37,17 @@ class Pallet implements IdInterface
     public Shipment $shipment;
 
     /**
-     * @return Receiver
+     * @return User
      */
-    public function getReceiver(): Receiver
+    public function getReceiver(): User
     {
         return $this->receiver;
     }
 
     /**
-     * @param Receiver $receiver
+     * @param User $receiver
      */
-    public function setReceiver(Receiver $receiver): void
+    public function setReceiver(User $receiver): void
     {
         $this->receiver = $receiver;
     }

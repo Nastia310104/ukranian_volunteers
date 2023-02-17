@@ -28,11 +28,6 @@ services:
         tags:
             - { name: sonata.admin, model_class: App\Entity\Shipment, manager_type: orm, label: Shipment, group: Humanitarian aid }
 
-    admin.receiver:
-        class: App\Admin\ReceiverAdmin
-        tags:
-            - { name: sonata.admin, model_class: App\Entity\Receiver, manager_type: orm, label: Receiver, group: Humanitarian aid }
-
     admin.pallet:
         class: App\Admin\PalletAdmin
         tags:

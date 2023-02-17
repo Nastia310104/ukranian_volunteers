@@ -18,6 +18,13 @@ migration-create:
 migrate:
 	${CONSOLE} doctrine:migrations:migrate
 
+database-drop:
+	${CONSOLE} doctrine:database:drop --force
+	${CONSOLE} doctrine:database:create
+
+admin:
+	${CONSOLE} sonata:user:create adminuser --super-admin admin admin
+
 # server
 server-start:
 	symfony local:server:start -d

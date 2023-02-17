@@ -3,18 +3,21 @@
                   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="https://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-
-    <entity name="App\Entity\Receiver" table="receivers" >
+    <entity name="App\Entity\User" table="users" >
 
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
 
-        <field name="name" type="string" column="name" />
+        <field name="name" type="string" column="name" nullable="false" />
         <field name="phoneNumber" type="string" column="phone_number" />
+        <field name="receiver" type="boolean" column="is_receiver" nullable="false" />
+        <field name="comment" type="string" column="user_comment" nullable="true" />
+        <field name="telegramUserId" type="string" column="telegram_user_id" nullable="false" />
         <field name="address" type="string" column="address" />
 
         <one-to-many field="boxes" target-entity="App\Entity\Box" mapped-by="receiver_id" />
+        <one-to-many field="pallets" target-entity="App\Entity\Pallet" mapped-by="receiver_id" />
 
     </entity>
 </doctrine-mapping>
