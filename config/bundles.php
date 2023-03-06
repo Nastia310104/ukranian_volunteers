@@ -21,4 +21,5 @@ return [
     Sonata\AdminBundle\SonataAdminBundle::class => ['all' => true],
     Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle::class => ['all' => true],
     Borsaco\TelegramBotApiBundle\TelegramBotApiBundle::class => ['all' => true],
+    SergiX44\NutgramBundle\NutgramBundle::class => ['all' => true],
 ];

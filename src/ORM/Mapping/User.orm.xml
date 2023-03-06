@@ -9,12 +9,13 @@
             <generator strategy="AUTO"/>
         </id>
 
-        <field name="name" type="string" column="name" nullable="false" />
-        <field name="phoneNumber" type="string" column="phone_number" />
-        <field name="receiver" type="boolean" column="is_receiver" nullable="false" />
+        <field name="name" type="string" column="name" nullable="true" />
+        <field name="phoneNumber" type="string" column="phone_number" nullable="true" />
+        <field name="receiver" type="boolean" column="is_receiver" nullable="true" />
         <field name="comment" type="string" column="user_comment" nullable="true" />
-        <field name="telegramUserId" type="string" column="telegram_user_id" nullable="false" />
-        <field name="address" type="string" column="address" />
+        <field name="telegramUserId" type="string" column="telegram_user_id" nullable="true" />
+        <field name="telegramChatId" type="string" column="telegram_chat_id" nullable="true" />
+        <field name="address" type="string" column="address" nullable="true" />
 
         <one-to-many field="boxes" target-entity="App\Entity\Box" mapped-by="receiver_id" />
         <one-to-many field="pallets" target-entity="App\Entity\Pallet" mapped-by="receiver_id" />

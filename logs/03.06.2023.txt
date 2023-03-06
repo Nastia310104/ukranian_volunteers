@@ -1,0 +1,105 @@
+03-06-2023 04:05:36{
+    "update_id": 587948880,
+    "message": {
+        "message_id": 94,
+        "from": {
+            "id": 897459739,
+            "is_bot": false,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": 897459739,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "type": "private"
+        },
+        "date": 1678074734,
+        "text": "Help"
+    }
+}
+03-06-2023 04:05:47{
+    "update_id": 587948880,
+    "message": {
+        "message_id": 94,
+        "from": {
+            "id": 897459739,
+            "is_bot": false,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": 897459739,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "type": "private"
+        },
+        "date": 1678074734,
+        "text": "Help"
+    }
+}
+03-06-2023 04:07:24{
+    "update_id": 587948880,
+    "message": {
+        "message_id": 94,
+        "from": {
+            "id": 897459739,
+            "is_bot": false,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": 897459739,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "type": "private"
+        },
+        "date": 1678074734,
+        "text": "Help"
+    }
+}
+03-06-2023 04:07:24{
+    "update_id": 587948881,
+    "message": {
+        "message_id": 95,
+        "from": {
+            "id": 897459739,
+            "is_bot": false,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": 897459739,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "type": "private"
+        },
+        "date": 1678075639,
+        "text": "Trxt"
+    }
+}
+03-06-2023 04:23:00{
+    "update_id": 587948880,
+    "message": {
+        "message_id": 94,
+        "from": {
+            "id": 897459739,
+            "is_bot": false,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": 897459739,
+            "first_name": "Nastia",
+            "username": "somk360",
+            "type": "private"
+        },
+        "date": 1678074734,
+        "text": "Help"
+    }
+}

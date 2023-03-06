@@ -9,19 +9,21 @@ use Sonata\UserBundle\Entity\BaseUser;
 class User extends BaseUser
 {
     /**
-     * @var string
+     * @var string|null
      */
-    public string $name = "N/A";
+    public ?string $name = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public string $phoneNumber = "N/A";
+    public ?string $phoneNumber = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public string $telegramUserId = "N/A";
+    public ?string $telegramUserId = null;
+
+    public ?string $telegramChatId = null;
 
     /**
      * @var bool
@@ -34,9 +36,9 @@ class User extends BaseUser
     public ?string $comment = null;
 
     /**
-     * @var string
+     * @var string|null
      */
-    public string $address = "N/A";
+    public ?string $address = null;
 
     /**
      * @var Collection|ArrayCollection
@@ -63,11 +65,14 @@ class User extends BaseUser
     }
 
     /**
-     * @param string $name
+     * @param string|null $name
+     * @return User
      */
-    public function setName(string $name): void
+    public function setName(?string $name): User
     {
         $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -79,11 +84,14 @@ class User extends BaseUser
     }
 
     /**
-     * @param string $phoneNumber
+     * @param string|null $phoneNumber
+     * @return User
      */
-    public function setPhoneNumber(string $phoneNumber): void
+    public function setPhoneNumber(?string $phoneNumber): User
     {
         $this->phoneNumber = $phoneNumber;
+
+        return $this;
     }
 
     /**
@@ -95,11 +103,33 @@ class User extends BaseUser
     }
 
     /**
-     * @param string $telegramUserId
+     * @param string|null $telegramUserId
+     * @return User
      */
-    public function setTelegramUserId(string $telegramUserId): void
+    public function setTelegramUserId(?string $telegramUserId): User
     {
         $this->telegramUserId = $telegramUserId;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getTelegramChatId(): ?string
+    {
+        return $this->telegramChatId;
+    }
+
+    /**
+     * @param string|null $telegramChatId
+     * @return User
+     */
+    public function setTelegramChatId(?string $telegramChatId): User
+    {
+        $this->telegramChatId = $telegramChatId;
+
+        return $this;
     }
 
     /**
@@ -112,10 +142,13 @@ class User extends BaseUser
 
     /**
      * @param string|null $comment
+     * @return User
      */
-    public function setComment(?string $comment): void
+    public function setComment(?string $comment): User
     {
         $this->comment = $comment;
+
+        return $this;
     }
 
     /**
@@ -128,10 +161,13 @@ class User extends BaseUser
 
     /**
      * @param bool $receiver
+     * @return User
      */
-    public function setReceiver(bool $receiver): void
+    public function setReceiver(bool $receiver): User
     {
         $this->receiver = $receiver;
+
+        return $this;
     }
 
     /**
@@ -143,11 +179,14 @@ class User extends BaseUser
     }
 
     /**
-     * @param string $address
+     * @param string|null $address
+     * @return User
      */
-    public function setAddress(string $address): void
+    public function setAddress(?string $address): User
     {
         $this->address = $address;
+
+        return $this;
     }
 
     /**
@@ -160,10 +199,13 @@ class User extends BaseUser
 
     /**
      * @param ArrayCollection|Collection $boxes
+     * @return User
      */
-    public function setBoxes(ArrayCollection|Collection $boxes): void
+    public function setBoxes(ArrayCollection|Collection $boxes): User
     {
         $this->boxes = $boxes;
+
+        return $this;
     }
 
     /**
@@ -196,10 +238,13 @@ class User extends BaseUser
 
     /**
      * @param ArrayCollection|Collection $pallets
+     * @return User
      */
-    public function setPallets(ArrayCollection|Collection $pallets): void
+    public function setPallets(ArrayCollection|Collection $pallets): User
     {
         $this->pallets = $pallets;
+
+        return $this;
     }
 
     /**
@@ -215,10 +260,12 @@ class User extends BaseUser
 
     /**
      * @param Pallet $pallet
-     * @return void
+     * @return User
      */
-    public function removePallet(Pallet $pallet): void
+    public function removePallet(Pallet $pallet): User
     {
         $this->pallets->remove($pallet);
+
+        return $this;
     }
 }

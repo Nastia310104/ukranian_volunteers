@@ -20,6 +20,12 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    # Nutgram handlers
+    App\Telegram\:
+        public: true
+        shared: false
+        resource: '../src/Telegram'
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 

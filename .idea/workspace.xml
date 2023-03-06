@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5e5db17-3c13-40c1-8021-87e1ca5b43af" name="Changes" comment="">
+    <list default="true" id="528f002f-007e-40a3-8cea-123c81770455" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/volunteer-bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/volunteer-bot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/monolog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/telegram.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/telegram.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20230217045205.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20230217045205.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Version20221214023810.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/ReceiverAdmin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bundles/sonataadmin/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bundles/sonataadmin/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Telegram/GetBotData.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Telegram/GetBotData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Box.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Box.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Pallet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Pallet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ORM/Mapping/User.orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ORM/Mapping/User.orm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +51,7 @@
         </path_mappings>
       </server>
       <server host="localhost:8000" id="3a24f1c9-e0ba-4f47-9fec-036d32ac6b5f" name="localhost:8000" port="8000" />
+      <server host="localhost:8443" id="80a437cd-e3cb-48af-94ec-bc950ea9bc8e" name="localhost:8443" port="8443" />
     </servers>
   </component>
   <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:9003" />
@@ -73,7 +90,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
@@ -84,7 +100,6 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
@@ -200,6 +215,11 @@
       <path value="$PROJECT_DIR$/vendor/illuminate/support" />
       <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
       <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/league/container" />
+      <path value="$PROJECT_DIR$/vendor/nutgram/nutgram" />
+      <path value="$PROJECT_DIR$/vendor/nutgram/hydrator" />
+      <path value="$PROJECT_DIR$/vendor/nutgram/symfony-bundle" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -213,30 +233,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm&quot;: &quot;Docker&quot;,
-    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm&quot;: &quot;Docker&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/somkbm/Desktop/projects/volunteer-bot/templates/Styles&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/somkbm/Desktop/projects/volunteer-bot/node_modules/stylelint&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php.debug&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
+    "last_opened_file_path": "/Users/somkbm/Desktop/projects/volunteer-bot/templates/Styles",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "/Users/somkbm/Desktop/projects/volunteer-bot/node_modules/stylelint",
+    "nodejs_package_manager_path": "yarn",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php.debug",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/Styles" />
@@ -284,7 +305,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f5e5db17-3c13-40c1-8021-87e1ca5b43af" name="Changes" comment="" />
+      <changelist id="528f002f-007e-40a3-8cea-123c81770455" name="Changes" comment="" />
       <created>1670384262733</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -314,6 +335,17 @@
       <workItem from="1676153393119" duration="1691000" />
       <workItem from="1676570150468" duration="4084000" />
       <workItem from="1676661782087" duration="735000" />
+      <workItem from="1676749449538" duration="720000" />
+      <workItem from="1676939302785" duration="637000" />
+      <workItem from="1676940668351" duration="281000" />
+      <workItem from="1677037910957" duration="1869000" />
+      <workItem from="1677085322312" duration="781000" />
+      <workItem from="1677088984069" duration="1751000" />
+      <workItem from="1677169320555" duration="9177000" />
+      <workItem from="1677783111479" duration="201000" />
+      <workItem from="1677793125918" duration="327000" />
+      <workItem from="1677815825471" duration="326000" />
+      <workItem from="1677967455747" duration="18933000" />
     </task>
     <servers />
   </component>

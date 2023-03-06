@@ -17,3 +17,6 @@ telegram_bot_api:
     help_ukrainian_bot:
       token: 5601341459:AAHJSCQIjWbAHoH2IVRqZqo7Xpt_jMFqdo8
       maintenance: false
+    help_ukrainian_in_oswego_bot:
+      token: 6006973367:AAH8BUHlOHl5Nk-Jl5SlnciupMdVjVHpUvM
+      maintenance: false

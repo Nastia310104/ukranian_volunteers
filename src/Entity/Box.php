@@ -22,14 +22,14 @@ class Box implements IdInterface
     public Collection|ArrayCollection $categories;
 
     /**
-     * @var Pallet
+     * @var Pallet|null
      */
-    public Pallet $pallet;
+    public ?Pallet $pallet;
 
     /**
-     * @var User
+     * @var User|null
      */
-    public User $receiver;
+    public ?User $receiver;
 
     /**
      * @return ArrayCollection|Collection
@@ -81,9 +81,9 @@ class Box implements IdInterface
     }
 
     /**
-     * @param Pallet $pallet
+     * @param Pallet|null $pallet
      */
-    public function setPallet(Pallet $pallet): void
+    public function setPallet(?Pallet $pallet): void
     {
         $this->pallet = $pallet;
     }
@@ -97,9 +97,9 @@ class Box implements IdInterface
     }
 
     /**
-     * @param User $receiver
+     * @param User|null $receiver
      */
-    public function setReceiver(User $receiver): void
+    public function setReceiver(?User $receiver): void
     {
         $this->receiver = $receiver;
     }

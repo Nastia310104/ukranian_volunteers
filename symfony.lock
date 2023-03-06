@@ -41,6 +41,9 @@
     "knplabs/knp-menu-bundle": {
         "version": "v3.2.0"
     },
+    "nutgram/symfony-bundle": {
+        "version": "0.0.7"
+    },
     "phpunit/phpunit": {
         "version": "9.5",
         "recipe": {
