@@ -6,7 +6,7 @@ use App\Manager\UserManager;
 
 trait UserManagerInjectionTrait
 {
-    public UserManager $userManager;
+    private UserManager $userManager;
 
     /**
      * @requires
